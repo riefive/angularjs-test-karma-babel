@@ -1,0 +1,42 @@
+{
+  "name": "angular-js-jasmine-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --open=.",
+    "babel": "npx babel src --out-dir dist --extensions .ts --copy-files --no-copy-ignored --config-file ./configs/babel.config.js",
+    "babel:factory": "npx babel src --out-dir dist-factory --extensions .ts --config-file ./configs/babel.config.factory.js",
+    "babel:watch": "npx babel --watch src --out-dir dist --extensions .ts --copy-files --no-copy-ignored --config-file ./configs/babel.config.js",
+    "build": "npm run clear && npx tsc",
+    "clear": "npx rimraf dist && npx rimraf coverage",
+    "test": "npx karma start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/angular": "^1.8.7",
+    "@types/angular-cookies": "^1.8.3",
+    "@types/angular-mocks": "^1.7.4",
+    "@types/angular-route": "^1.7.5",
+    "@types/jasmine": "^5.1.2",
+    "angular": "^1.8.3",
+    "angular-cookies": "^1.8.3",
+    "angular-mocks": "^1.8.3",
+    "angular-route": "^1.8.3",
+    "jasmine-core": "^5.1.1",
+    "karma": "^6.4.2",
+    "karma-browserify": "^8.1.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-cli": "^2.0.0",
+    "karma-coverage": "^2.2.1",
+    "karma-jasmine": "^5.1.0",
+    "live-server": "^1.1.0",
+    "rimraf": "^5.0.5"
+  }
+}
